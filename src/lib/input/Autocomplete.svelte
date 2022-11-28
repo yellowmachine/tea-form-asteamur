@@ -1,11 +1,11 @@
 <script lang="ts">
-    //import { getContext, onMount } from 'svelte'
     import AutoComplete from 'simple-svelte-autocomplete';
     import { useQuery } from '@sveltestack/svelte-query'
 
     export let name
     export let value
     export let label
+    export let disabled = false
     export let onChange = (name: string, value: string) => {};
 
     const colors = [
@@ -16,9 +16,6 @@
     ];
 
     const result = useQuery('colors', async () => colors)
-
-    //const { setTouched } = getContext<Record<string, any>>('asteamur-Form')
-    //onMount(()=>setTouched(name, false))
 
     let options = []
     $: options = $result.data || []

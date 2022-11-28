@@ -1,5 +1,5 @@
 <script lang="ts">
-    //import { getContext, onMount } from 'svelte' 
+
     import { useQuery } from '@sveltestack/svelte-query'
     import Svelecte from 'svelecte'
     import { Q } from './query'
@@ -12,9 +12,6 @@
 
     const f = Q[query]
     const result = useQuery('todos', f)
-
-    //const { setTouched } = getContext<Record<string, any>>('asteamur-Form')
-    //onMount(()=>setTouched(name, false))
 
     let options: {value: string, text: string}[] = []
     $: options = $result.data || value ? [value]: []
