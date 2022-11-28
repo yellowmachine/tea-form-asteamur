@@ -30,6 +30,7 @@
     "daisyui": "^2.42.1",
     "felte": "^1.2.6",
     "simple-svelte-autocomplete": "^2.5.1",
+    "svelte-table": "^0.5.2",
     "svelte-tabs": "^1.1.0",
     "svelte-toasts": "^1.1.2",
     "zod": "^3.19.1"
