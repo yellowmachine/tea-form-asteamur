@@ -22,6 +22,7 @@
         {#each row as component ('_'+component.name)}
             <svelte:component 
                 name={component.name} 
+                label={component.label}
                 this={component.c} 
                 value={value[component.name]}
                 disabled={component.allowed? !component.allowed(r): false} 
