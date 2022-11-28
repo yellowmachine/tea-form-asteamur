@@ -1,13 +1,18 @@
 <script lang="ts">
-    //import Formgenerator from "@/lib/form/FormGenerator.svelte";
+    import { QueryClient, QueryClientProvider } from '@sveltestack/svelte-query'
+    import { ToastContainer, FlatToast }  from "svelte-toasts";
+    import Formgenerator from "@/lib/form/FormGenerator.svelte";
     import { elements, formPageOptions as options } from "@/lib/user";
 
-    //let id = null;
+    const queryClient = new QueryClient()
+    let id = null;
 </script>
 
-hello ;)
-<!--
-<main>
+<QueryClientProvider client={queryClient}>
   <Formgenerator {id} {options} {elements} />
-</main>
--->
+</QueryClientProvider>
+
+<ToastContainer let:data={data}>
+  <FlatToast {data}  />
+</ToastContainer>
+
