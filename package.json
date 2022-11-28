@@ -21,5 +21,17 @@
     "tslib": "^2.4.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
+  },
+  "dependencies": {
+    "@felte/reporter-svelte": "^1.1.4",
+    "@felte/validator-zod": "^1.0.12",
+    "@sveltestack/svelte-query": "^1.6.0",
+    "axios": "^1.2.0",
+    "daisyui": "^2.42.1",
+    "felte": "^1.2.6",
+    "simple-svelte-autocomplete": "^2.5.1",
+    "svelte-tabs": "^1.1.0",
+    "svelte-toasts": "^1.1.2",
+    "zod": "^3.19.1"
   }
 }

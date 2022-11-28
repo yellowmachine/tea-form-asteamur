@@ -2,7 +2,7 @@
     import { useQuery } from '@sveltestack/svelte-query'
     import type { FormPageOptions } from '../form/formPage';
     import { useMutation } from '@sveltestack/svelte-query'
-    import { showMutationToast } from '@/toast'
+    import { showMutationToast } from '@/toats';
     import { validator } from '@felte/validator-zod';
     import { createForm } from 'felte';
     import { reporter } from '@felte/reporter-svelte';
@@ -25,7 +25,7 @@
     const _mutation = useMutation(()=>mutation(id, $data))
   
     function submit(){
-        return $_mutation.mutate()
+        //return $_mutation.mutate()
     }
 
     function onChange(name, data) {
@@ -39,7 +39,7 @@
     let v
     $: {
         if(id === null) v = options.initialValues
-        else v = $result.data
+        //else v = $result.data
         setData(v)
     }
 </script>
